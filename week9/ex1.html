@@ -5,25 +5,21 @@
 
     <script language="javascript">
 
-        // Nhập dữ liệu
         var txta = prompt("Enter number A");
         var txtb = prompt("Enter number B");
 
-        // Kiểm tra số A
         if (txta == null || txta == "" || isNaN(txta)) {
 
             alert("Number A is formatted incorrect");
 
         }
 
-        // Kiểm tra số B
         else if (txtb == null || txtb == "" || isNaN(txtb)) {
 
             alert("Number B is formatted incorrect");
 
         }
 
-        // Nếu đúng thì cộng
         else {
 
             var result = parseFloat(txta) + parseFloat(txtb);
