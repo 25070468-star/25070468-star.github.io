@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table</title>
+
+    <script>
+        function display() {
+
+            var a = document.getElementById("number").value;
+
+            var result = document.getElementById("result");
+
+            result.innerHTML = "";
+
+            if (isNaN(a) || a == "") {
+
+                result.innerHTML =
+                    "<font color='red'>You must enter a number</font>";
+
+            } else {
+
+                result.innerHTML =
+                    "<b>Multiplication table " + a + ":</b><br><br>";
+
+                for (var i = 1; i <= 10; i++) {
+
+                    result.innerHTML +=
+                        a + " x " + i + " = " + (a * i) + "<br>";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <center>
+        Which multiplication table that you want to display?
+
+        <input type="text"
+               id="number"
+               onkeyup="display()">
+
+        <br><br>
+
+        <div id="result"
+             style="
+                width:220px;
+                min-height:200px;
+                border:1px solid gray;
+                padding:10px;
+                text-align:left;
+             ">
+        </div>
+    </center>
+
+</body>
+</html>
